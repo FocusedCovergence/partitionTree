@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural number partition</title>
+    <script src="https://d3js.org/d3.v7.min.js" defer></script>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <h1>Natural number partition</h1>
+    <!-- <p>Kaichun Yang (yang.5853)</p><br> -->
+    <div id="pythonFile">
+        <h2>Visualization 1: Partition Tree</h2>
+        <iframe src="https://partitiontree-cse5544project.streamlit.app/?embedded=true" width="100%" height="900px" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <hr>
+    <div class="youngD">
+        <h2>Visualization 2: Young diagram</h2>
+        <p class="intro">How to read: Every color represents one way of partition, for the same color in one column, get the sum of the number of blocks, for same color in different columns, insert "+" between columns.<br>
+            <br>e.g. : For group of blocks have same color which have 3 blocks in first column and 2 in second column, it represents partition (3+2)
+        </p>
+        <p>Enter a Natural Number under 30 (Numbers greater than 15 may cause significant lag): </p>
+        <div id="input-container">
+            <input type="text" id="userInput" placeholder="e.g.: 5">
+            <button onclick="generateAndDisplayPartitions()">Generate</button>
+            <div class="overviewClass" id="overviewClass">
+                <p id="displaySummary"></p>
+                <p id="displayValue"></p>
+                <div id="slider-container" style="display: none;">
+                    <input type="range" min="0" max="100" value="50" class="slider" id="ovewviewSlider">
+                    <p id="squaresShift">Squares shift adjust: <span id="sliderValue">50%</span></p>
+                </div>
+            </div>
+            <div class="selectByPartitionClass" id="selectByPartitionClass" style="display: none;">
+                <p id="checkboxIntro"></p>
+                <p id="checkboxContainer"></p>
+                <button id="checkAllButton">Check All</button>
+                <button id="uncheckAllButton">UnCheck All</button>
+            </div>
+            <div class="listAllPart" id="listAllPart" style="display: none;">
+            </div>
+            <!-- <p id="displayValue"></p> -->
+            <!-- <div id="slider-container" style="display: none;">
+                <input type="range" min="0" max="100" value="50" class="slider" id="ovewviewSlider">
+                <p>Squares shift adjust: <span id="sliderValue">50%</span></p>
+            </div> -->
+        </div>
+        <p id="waitingMessage" style="display: none;"> Generating partitions, please wait... </p>
+        <button id="overviewButton" onclick="showShowDiagram()">Overview</button>
+        <button id="selectByPartitionButton" onclick="showSelectByPartition()">Select Partition</button>
+        <button id="listAllButton" onclick="showlistAll()">List All Partitions</button>
+        <p id="currentPartition"> Current chosen partition is: </p>
+        <div class="showDiagram" id="showDiagram"></div>
+        <div class="selectByPartition" id="selectByPartition" style="display: none;"></div>
+        <div class="listAll" id="listAll" style="display: none;"></div>
+        <div id="tooltip", style="position: absolute; display: none;"></div>
+    </div><br>
+</body>

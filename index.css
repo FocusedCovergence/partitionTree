@@ -1,0 +1,74 @@
+#showDiagram {
+    width: 1800px; 
+    max-width: calc(100% + 1000px);
+    margin: 0 -400px;
+    position: relative;
+}
+#selectByPartition{
+
+    width: 1800px; 
+    max-width: calc(100% + 1000px);
+    margin: 0 -400px;
+    position: relative;
+}
+
+#listAll{
+    width: 1000px; 
+    max-width: calc(100% + 1000px);
+    margin: 0 ;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 800px;
+    position: relative;
+}
+
+
+svg {
+    display: block;
+    margin: auto;
+}
+
+#slider-container{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    text-align: center;
+}
+
+.intro{
+    display: inline-block;
+}
+
+body{
+    width: 1000px;
+    display: block;
+    margin: 0 auto;
+}
+
+#displayValue{
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#checkboxContainer{
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+hr {
+    border: none;
+    border-top: 5px double black; 
+}
+
+#squaresShift {
+    font-size: 12px;
+    margin: 0%;
+}
+
+#sliderValue {
+    font-size: 12px;
+}
+
+
+
